@@ -1,8 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
+
 
 body {
     background-color: #d4c9c9; /* gris claro */
@@ -109,4 +108,4 @@ body {
     .avatar {
         width: 150px;
     }
-}
+
