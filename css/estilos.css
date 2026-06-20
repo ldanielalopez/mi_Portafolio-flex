@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d4c9c9; /* gris claro */
+    font-family: Arial, sans-serif;
+    color: #000; /* texto negro para contraste */
+}
+
+/* Header superior donde está la informacion de la pagina, tiene flexbox */
+.header {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #948e99;
+    gap: 20px; 
+    }
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    }
+
+.icon-logo {
+    width: 45px;
+    height: 45px;
+    }
+
+/* navegación dentro de las opciones */
+.nav {
+    display: flex;
+    gap: 15px;
+    background-color: #b986f3;
+    padding: 8px 12px;
+    border-radius: 6px;
+    }
+
+.nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 4px;
+    }
+
+/* animacion en las opciones del header*/
+.nav a:hover {
+    background-color: #cc96ff;
+    color: #000;
+    transition: 0.3s;
+    }
+
+
+/* Botón menú que está visible en pantallas pequeñas */
+.menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    }
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    }
+
+.avatar {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    }
+
+.hero-texto {
+    max-width: 400px;
+    }   
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        background: #f0f0f0;
+        padding: 10px;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+/*bloquear menu en pantallas grandes*/
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .avatar {
+        width: 150px;
+    }
+}
