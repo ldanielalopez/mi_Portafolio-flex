@@ -1,7 +1,16 @@
-// Menú hamburguesa
+
 const menuBtn = document.getElementById("menuBtn");
 const menu = document.getElementById("menu");
 
+
 menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("active");
+    menu.classList.toggle("active"); 
+});
+
+
+const menuLinks = menu.querySelectorAll("a");
+menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("active"); // cierra el menú
     });
+});

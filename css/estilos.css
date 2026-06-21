@@ -1,23 +1,32 @@
+/* Reset */
 * {
     box-sizing: border-box;
 }
 
-
+/* Body */
 body {
-    background-color: #d4c9c9; /* gris claro */
+    margin: 0;
+    background-color: #c9c9d4;
     font-family: Arial, sans-serif;
-    color: #000; /* texto negro para contraste */
+    color: #000;
 }
 
-/* Header superior donde está la informacion de la pagina, tiene flexbox */
+/* Contenedor general */
+.contenedor {
+    width: clamp(99%, 1100px, 95%);
+    margin: 0 auto;
+    padding: 0 15px 20px;
+}
+
+/* Header */
 .header {
     display: flex;
-    justify-content: space-between;  
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #948e99;
-    gap: 20px; 
-    }
+    padding: 0 20px;
+    background-color: #878292;
+    gap: 24px;
+}
 
 .logo {
     display: flex;
@@ -25,77 +34,152 @@ body {
     gap: 8px;
     font-weight: bold;
     font-size: 1.2rem;
-    }
+}
 
 .icon-logo {
     width: 45px;
     height: 45px;
-    }
+}
 
-/* navegación dentro de las opciones */
+/* Navegación */
 .nav {
     display: flex;
-    gap: 15px;
-    background-color: #b986f3;
-    padding: 8px 12px;
+    gap: 10px;
+    background-color: #9d85b8;
+    padding: 4px 8px;
     border-radius: 6px;
-    }
+    margin: 0 20px;
+}
 
 .nav a {
     text-decoration: none;
     color: #000000;
     font-weight: 500;
-    padding: 6px 10px;
+    padding: 4px 8px;
     border-radius: 4px;
-    }
+}
 
-/* animacion en las opciones del header*/
 .nav a:hover {
-    background-color: #cc96ff;
+    background-color: #a88bc4;
     color: #000;
     transition: 0.3s;
-    }
+}
 
-/* Botón menú que está visible en pantallas pequeñas */
+/* Botón menú*/
 .menu-btn {
     display: none;
     font-size: 1.5rem;
     background: none;
     border: none;
     cursor: pointer;
-    }
+}
 
+/* Hero */
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     padding: 40px;
-    }
+}
 
 .avatar {
     width: 200px;
     height: auto;
     border-radius: 10px;
-    }
+}
 
 .hero-texto {
     max-width: 400px;
-    }   
+}
 
+/* Sección Sobre mí */
+.sobre-mi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.columna {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Galería de habilidades */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.galeria h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.galeria-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.galeria .tarjeta {
+    flex: 1 1 calc(33.33% - 20px);
+    background: #e6e6e6;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Menú activo */
+.nav.active {
+    display: flex;
+}
+
+/* Contactos */
+.redes a {
+    color: #75006f;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    color: #25032e;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+/* Responsive Tablet */
+@media (max-width: 1024px) {
+    .galeria .tarjeta {
+        flex: 1 1 calc(50% - 20px); /* 2 por fila en tablet */
+    }
+}
+
+/* Responsive Móvil */
 @media (max-width: 768px) {
     .nav {
         display: none;
         flex-direction: column;
-        background: #f0f0f0;
+        background: #cfa4f7;
         padding: 10px;
     }
 
-    .nav.active {
-        display: flex;
-    }
-
-/*bloquear menu en pantallas grandes*/
     .menu-btn {
         display: block;
     }
@@ -109,3 +193,7 @@ body {
         width: 150px;
     }
 
+    .galeria .tarjeta {
+        flex: 1 1 100%; /* 1 por fila en móvil */
+    }
+}
