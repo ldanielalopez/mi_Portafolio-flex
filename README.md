@@ -56,4 +56,4 @@ Vista principal del portafolio en pantalla grande, aquí se observa la presentac
 ![Pantalla Pequeña](img/vistaPantallaChica.png)
 
 ## Visualización:
-link: https://ldanielalopez.github.io/Mi_Portafolio-flex/dame un vs
+link: https://ldanielalopez.github.io/Mi_Portafolio-flex/
